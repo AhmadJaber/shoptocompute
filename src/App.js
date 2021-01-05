@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import * as ROUTES from './constants/routes';
 import {
   About,
   Cart,
@@ -14,26 +16,27 @@ import {
 export default function App() {
   return (
     <Router>
+      <Layout />
       <Switch>
-        <Route exact path="/">
+        <Route exact path={ROUTES.HOME}>
           <Home />
         </Route>
-        <Route path="/about">
+        <Route path={ROUTES.ABOUT}>
           <About />
         </Route>
-        <Route path="/cart">
+        <Route path={ROUTES.CART}>
           <Cart />
         </Route>
-        <Route path="/checkout">
+        <Route path={ROUTES.CHECKOUT}>
           <Checkout />
         </Route>
-        <Route path="/login">
+        <Route path={ROUTES.LOGIN}>
           <Login />
         </Route>
-        <Route path="/products" exact>
+        <Route path={ROUTES.PRODUCTS} exact>
           <Products />
         </Route>
-        <Route path="/products/:id">
+        <Route path={ROUTES.PRODUCTDETAILS}>
           <ProductDetails />
         </Route>
         <Route path="*">
