@@ -1,14 +1,6 @@
-/*
-======
-Fonts
-======
-*/
 @import url('https://fonts.googleapis.com/css?family=Catamaran:300,400|Kaushan+Script&display=swap');
-/*
-======
-Variables
-======
-*/
+
+/* --------- variables -----------*/
 :root {
   /* --primaryColor: #9e3aa3; */
   /* --primaryDarkColor: #4e1d51; */
@@ -18,9 +10,9 @@ Variables
   --slantedFont: 'Kaushan Script', cursive;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
-  --mainBackground: #ececec;
+  --mainBackground: #fbfef9;
   --mainOverlay: rgba(35, 10, 36, 0.4);
-  --mainBlack: #222;
+  --mainBlack: #191923;
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
   --mainRed: #bd0303;
@@ -195,21 +187,7 @@ Hero
     padding: 1rem 3rem;
   }
 }
-/*
-======
-About
-======
-*/
-.about-section {
-  width: var(--smallWidth);
-  max-width: var(--maxWidth);
-  margin: 0 auto;
-}
-.about-section p {
-  line-height: 2rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-}
+
 /*
 ======
 Error
@@ -239,6 +217,7 @@ Product List
   letter-spacing: var(--mainSpacing);
   text-align: center;
   margin-bottom: 3.5rem;
+  color: var(--primaryColor);
 }
 .products-center {
   width: var(--smallWidth);

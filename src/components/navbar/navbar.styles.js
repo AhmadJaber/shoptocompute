@@ -1,11 +1,11 @@
 import styled from 'styled-components/macro';
 
 export const Header = styled.header`
-  padding: 2rem 0;
+  padding: 2em 0 1em;
 
   .logo {
     margin: 0 auto;
-    width: 9rem;
+    width: 11rem;
   }
 
   ul {
@@ -13,7 +13,7 @@ export const Header = styled.header`
     justify-content: space-between;
     width: var(--smallWidth);
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 1.25em;
     max-width: var(--maxWidth);
 
     div {
@@ -29,7 +29,7 @@ export const Header = styled.header`
     letter-spacing: 2px;
     transition: var(--mainTransition);
 
-    a:hover {
+    &:hover {
       color: var(--primaryColor);
     }
   }
