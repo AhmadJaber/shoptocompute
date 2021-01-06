@@ -13,7 +13,7 @@ export const Header = styled.header`
     justify-content: space-between;
     width: var(--smallWidth);
     margin: 0 auto;
-    margin-top: 1.25em;
+    margin-top: 1.5em;
     max-width: var(--maxWidth);
 
     div {

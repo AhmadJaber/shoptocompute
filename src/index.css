@@ -25,11 +25,8 @@
   --smallWidth: 85vw;
   --fullWidth: 1170px;
 }
-/*
-======
-Global Styles
-======
-*/
+
+/*--------Global Styles----------*/
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +38,7 @@ body {
   color: var(--mainBlack);
   background: var(--mainBackground);
   line-height: 1.4;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 300;
 }
 h1,
@@ -51,7 +48,7 @@ h4,
 h5,
 h6 {
   font-family: var(--primaryFont);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   letter-spacing: var(--mainSpacing);
 }
 p {
@@ -79,11 +76,8 @@ img {
   width: 10rem;
   margin: 0 auto;
 }
-/*
-======
-Buttons
-======
-*/
+
+/*---------Buttons---------*/
 .btn,
 .btn-white,
 .btn-primary {
@@ -95,8 +89,11 @@ Buttons
   display: inline-block;
   transition: var(--mainTransition);
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   background: transparent;
+  font-family: var(--primaryFont);
+  font-weight: 400;
+  line-height: 1.5;
 }
 .btn:hover {
   background: var(--primaryColor);
@@ -127,12 +124,8 @@ Buttons
   box-shadow: var(--lightShadow);
   text-align: center;
 }
-/*
 
-======
-Hero
-======
-*/
+/*---------Hero---------*/
 .hero {
   min-height: calc(65vh);
   background: linear-gradient(
@@ -188,25 +181,7 @@ Hero
   }
 }
 
-/*
-======
-Error
-======
-*/
-.error-page {
-  display: flex;
-  justify-content: center;
-}
-.error-container {
-  text-align: center;
-  text-transform: capitalize;
-}
-/*
-======
-Product List
-======
-*/
-
+/*---------Product List---------*/
 .section {
   padding: 4rem 0;
 }
