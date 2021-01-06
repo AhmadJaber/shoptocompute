@@ -5,7 +5,7 @@ export const Header = styled.header`
 
   .logo {
     margin: 0 auto;
-    width: 11rem;
+    width: 12rem;
   }
 
   ul {

@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavBar, SEO } from '../index';
+import SEO from '../seo/seo.component';
+import NavBar from '../navbar/navbar.component';
 
 export default function Layout() {
   return (

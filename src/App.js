@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Layout from './components/layout/Layout';
+import Layout from './components/layout/layout.component';
 import * as ROUTES from './constants/routes';
 import {
   About,
