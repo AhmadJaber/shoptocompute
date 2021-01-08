@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 export const Wrapper = styled.div`
-  min-height: 60vh;
+  min-height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,16 +14,17 @@ export const Wrapper = styled.div`
 
   h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: capitalize;
     margin-bottom: 0;
-    background: #eff1ff;
+    color: #eff1ff;
+    /* background: #eff1ff;
     background: radial-gradient(ellipse at center, #eff1ff 10%, #000 100%);
     background-size: 54% 156%;
     background-position: center center;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
   }
 
   .new-product {
@@ -57,7 +58,9 @@ export const Wrapper = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 3px;
-    margin-bottom: 1.75em;
+    margin-bottom: 3em;
+    text-transform: capitalize;
+    color: var(--primaryColor);
   }
 
   .btn-hero {

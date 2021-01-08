@@ -7,8 +7,10 @@ export default function Home() {
     <>
       <Hero>
         <span className="new-product">New</span>
-        <h2 className="new-product-title">MacBook Air</h2>
-        <div className="new-product-slogan">Power. It’s in the Air.</div>
+        <h2 className="new-product-title">RAZER BLADE STEALTH 13</h2>
+        <div className="new-product-slogan">
+          The World’s First Gaming Ultrabook
+        </div>
 
         <div>
           <Link to="/products" className="btn btn-primary btn-hero">
