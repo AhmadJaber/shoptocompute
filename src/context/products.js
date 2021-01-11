@@ -9,7 +9,7 @@ export default function ProductProvider({ children }) {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [featured, setFeatured] = useState([]);
-  console.log(products);
+  console.log('products', products);
 
   useEffect(() => {
     setLoading(true);

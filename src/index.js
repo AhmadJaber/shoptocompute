@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -7,9 +8,11 @@ import ProductProvider from './context/products';
 
 render(
   <React.StrictMode>
-    <ProductProvider>
-      <App />
-    </ProductProvider>
+    <HelmetProvider>
+      <ProductProvider>
+        <App />
+      </ProductProvider>
+    </HelmetProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
