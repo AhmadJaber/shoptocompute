@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { ProductContext } from '../context/products';
 import { Loading } from '../components';
+import { CartContext } from '../context/cart';
+import { CART } from '../constants/routes';
 
 export default function ProductDetails() {
   const { id } = useParams();
   const { products } = useContext(ProductContext);
+  const { addToCart } = useContext(CartContext);
+  const history = useHistory();
 
   if (products.length === 0) {
     return <Loading />;
@@ -25,7 +29,14 @@ export default function ProductDetails() {
         <h1>{title}</h1>
         <h2>${price}</h2>
         <p>{discription}</p>
-        <button className="btn btn-primary btn-block" type="submit">
+        <button
+          className="btn btn-primary btn-block"
+          type="submit"
+          onClick={() => {
+            addToCart(singleProduct);
+            history.push(CART);
+          }}
+        >
           add to cart
         </button>
       </article>

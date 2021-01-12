@@ -4,5 +4,7 @@ export { default as Hero } from './hero/hero.component';
 export { default as Loading } from './loading/loading.component';
 export { default as ProductList } from './product-list/product-list.component';
 export { default as Product } from './product/product.component';
-export { default as FeaturedProducts } from './featured-products/featured-products.component';
 export { default as Layout } from './layout/layout.component';
+export { default as FeaturedProducts } from './featured-products/featured-products.component';
+export { default as EmptyCart } from './empty-cart/empty-cart.component';
+export { default as CartItem } from './cart-item/cart-item.component';

@@ -5,12 +5,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ProductProvider from './context/products';
+import { CartProvider } from './context/cart';
 
 render(
   <React.StrictMode>
     <HelmetProvider>
       <ProductProvider>
-        <App />
+        <CartProvider>
+          <App />
+        </CartProvider>
       </ProductProvider>
     </HelmetProvider>
   </React.StrictMode>,
