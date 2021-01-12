@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CART, LOGIN } from '../../constants/routes';
+import { CartContext } from '../../context/cart';
 
 // TODO: add icon to cart
 export default function NavButton() {
+  const { cartNumber } = useContext(CartContext);
+
   return (
     <div>
       <button className="login-btn" type="submit">
@@ -13,7 +16,7 @@ export default function NavButton() {
 
       <div className="cart-link-container">
         <Link to={CART}>cart</Link>
-        <span className="cart-link-total">0</span>
+        <span className="cart-link-total">{cartNumber}</span>
       </div>
     </div>
   );

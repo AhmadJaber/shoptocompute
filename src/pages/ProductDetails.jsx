@@ -31,7 +31,7 @@ export default function ProductDetails() {
         <p>{discription}</p>
         <button
           className="btn btn-primary btn-block"
-          type="submit"
+          type="button"
           onClick={() => {
             addToCart(singleProduct);
             history.push(CART);
