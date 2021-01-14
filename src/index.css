@@ -337,6 +337,10 @@ Login Form
   box-shadow: var(--lightShadow);
 }
 
+.form-control {
+  margin-bottom: 1.5rem;
+}
+
 .form-control label {
   display: block;
 }
@@ -344,7 +348,6 @@ Login Form
   width: 100%;
   border: none;
   border-bottom: 2px solid var(--darkGrey);
-  margin-bottom: 1.25rem;
   padding: 0.5rem;
   font-size: 1.2rem;
 }
@@ -357,6 +360,7 @@ Login Form
   margin-bottom: 0;
   margin-top: 1rem;
   text-align: center;
+  font-weight: 600;
 }
 .register-link button {
   background: transparent;
@@ -369,6 +373,7 @@ Login Form
   cursor: pointer;
 }
 .disabled {
+  cursor: not-allowed;
   color: var(--mainWhite);
   background: var(--darkGrey);
   border-color: var(--darkGrey);
@@ -377,6 +382,28 @@ Login Form
   background: transparent;
   color: var(--darkGrey);
   border-color: var(--darkGrey);
+}
+
+.form-control .input-error {
+  border-bottom-color: #e63946;
+}
+
+.form-control .error {
+  display: inline-block;
+  color: #e63946;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.response-error {
+  color: #e63946;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(230, 57, 70, 0.3);
 }
 /*
 ======

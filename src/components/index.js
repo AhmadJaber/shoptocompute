@@ -8,3 +8,5 @@ export { default as Layout } from './layout/layout.component';
 export { default as FeaturedProducts } from './featured-products/featured-products.component';
 export { default as EmptyCart } from './empty-cart/empty-cart.component';
 export { default as CartItem } from './cart-item/cart-item.component';
+export { default as Login } from './login/login.component';
+export { default as Logout } from './logout/logout.component';

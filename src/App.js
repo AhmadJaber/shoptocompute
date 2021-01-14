@@ -8,7 +8,7 @@ import {
   Checkout,
   Error,
   Home,
-  Login,
+  LoginLogout,
   ProductDetails,
   Products,
 } from './pages';
@@ -31,7 +31,7 @@ export default function App() {
           <Checkout />
         </Route>
         <Route path={ROUTES.LOGIN}>
-          <Login />
+          <LoginLogout />
         </Route>
         <Route path={ROUTES.PRODUCTS} exact>
           <Products />
