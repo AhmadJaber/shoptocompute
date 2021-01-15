@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 import { URL } from '../../utils/url';
+import { UserContext } from '../../context/user';
+import { PRODUCTS } from '../../constants/routes';
 
 export default function Login() {
   const [errorLogin, setErrorLogin] = useState('');
+  const { userLogin, showAlert } = useContext(UserContext);
+  const history = useHistory();
 
   const intialInputValues = {
     email: '',
@@ -28,6 +33,20 @@ export default function Login() {
       });
 
       console.log(response);
+
+      if (response) {
+        const {
+          jwt: token,
+          user: { username: userName },
+        } = response.data;
+
+        const newUser = { token, userName };
+        userLogin(newUser);
+        showAlert({
+          msg: `Login Successful, ${userName}`,
+        });
+        history.push(PRODUCTS);
+      }
     } catch (error) {
       console.log(error.response.data.message[0].messages[0].message);
       setErrorLogin(error.response.data.message[0].messages[0].message);

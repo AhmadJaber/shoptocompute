@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 import { URL } from '../../utils/url';
+import { UserContext } from '../../context/user';
+import { PRODUCTS } from '../../constants/routes';
 
-export default function Logout() {
+export default function Register() {
   const [errorLogout, setErrorLogout] = useState('');
+  const { userLogin, showAlert } = useContext(UserContext);
+  const history = useHistory();
 
   const intialInputValues = {
     username: '',
@@ -34,6 +39,20 @@ export default function Logout() {
       });
 
       console.log(response);
+
+      if (response) {
+        const {
+          jwt: token,
+          user: { username: userName },
+        } = response.data;
+
+        const newUser = { token, userName };
+        userLogin(newUser);
+        showAlert({
+          msg: `Registration Successful, ${username}`,
+        });
+        history.push(PRODUCTS);
+      }
     } catch (error) {
       console.log(error.response);
       setErrorLogout(error.response.data.message[0].messages[0].message);

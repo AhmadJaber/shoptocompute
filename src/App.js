@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Layout } from './components';
+import { Layout, Alert } from './components';
 import * as ROUTES from './constants/routes';
 import {
   About,
@@ -17,6 +17,8 @@ export default function App() {
   return (
     <Router>
       <Layout />
+      <Alert />
+
       <Switch>
         <Route exact path={ROUTES.HOME}>
           <Home />

@@ -6,15 +6,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ProductProvider from './context/products';
 import { CartProvider } from './context/cart';
+import { UserProvider } from './context/user';
 
 render(
   <React.StrictMode>
     <HelmetProvider>
-      <ProductProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </ProductProvider>
+      <UserProvider>
+        <ProductProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </ProductProvider>
+      </UserProvider>
     </HelmetProvider>
   </React.StrictMode>,
   document.getElementById('root')

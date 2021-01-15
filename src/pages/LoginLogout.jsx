@@ -1,7 +1,5 @@
 import React from 'react';
-import { Login, Logout } from '../components';
-import loginUser from '../strapi/login-user';
-import registerUser from '../strapi/register-user';
+import { Login, Register } from '../components';
 
 export default function LoginLogout() {
   const [isMember, setIsMember] = React.useState(true);
@@ -23,7 +21,7 @@ export default function LoginLogout() {
         </button>
       </p>
 
-      {isMember ? <Login /> : <Logout />}
+      {isMember ? <Login /> : <Register />}
     </section>
   );
 }
