@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Layout, Alert } from './components';
+import { Layout, Alert, ScrollButton, PrivateRoute } from './components';
 import * as ROUTES from './constants/routes';
 import {
   About,
@@ -18,6 +18,7 @@ export default function App() {
     <Router>
       <Layout />
       <Alert />
+      <ScrollButton />
 
       <Switch>
         <Route exact path={ROUTES.HOME}>
@@ -29,9 +30,9 @@ export default function App() {
         <Route path={ROUTES.CART}>
           <Cart />
         </Route>
-        <Route path={ROUTES.CHECKOUT}>
+        <PrivateRoute path={ROUTES.CHECKOUT}>
           <Checkout />
-        </Route>
+        </PrivateRoute>
         <Route path={ROUTES.LOGIN}>
           <LoginLogout />
         </Route>

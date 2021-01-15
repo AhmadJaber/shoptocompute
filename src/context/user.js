@@ -28,7 +28,7 @@ function UserProvider({ children }) {
   });
 
   const userLogin = (newUser) => {
-    setUser(user);
+    setUser(newUser);
     localStorage.setItem('user', JSON.stringify(newUser));
   };
 

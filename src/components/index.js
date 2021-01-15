@@ -11,3 +11,5 @@ export { default as CartItem } from './cart-item/cart-item.component';
 export { default as Login } from './login/login.component';
 export { default as Register } from './register/register.component';
 export { default as Alert } from './alert/alert.component';
+export { default as ScrollButton } from './scroll-button/scroll-button.component';
+export { default as PrivateRoute } from './private-route/private-route.component';

@@ -439,16 +439,16 @@ Alert
 */
 .alert-container {
   position: fixed;
-  top: 30%;
+  top: 24%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
   z-index: 10;
-  background: green;
+  background: #dff2bf;
   width: 24rem;
-  padding: 2.5rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   text-align: center;
-  color: var(--mainWhite);
+  color: #270;
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: capitalize;
@@ -470,7 +470,7 @@ Alert
   background: var(--mainRed);
 }
 .alert-close {
-  color: var(--mainWhite);
+  color: var(--mainBlack);
   font-size: 1.5rem;
   background: transparent;
   border: none;
